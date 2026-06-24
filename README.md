@@ -87,22 +87,8 @@ python simulator.py
 ```
 This script will send randomized sensor events to the API every 5 seconds. You will see the parking dashboard update automatically in real-time!
 
----
 
-## 🔌 API Endpoints Reference
 
-The Cloud API exposes the following REST endpoints:
-
-| Method | Endpoint | Description | Payload Example |
-| :--- | :--- | :--- | :--- |
-| **GET** | `/api/status` | Fetch status of all 12 slots, total statistics, and recent activity logs. | *None* |
-| **GET** | `/api/health` | Checks if the server is healthy and online. | *None* |
-| **POST** | `/api/slots/{id}/book` | Reserve an available slot (must specify name & vehicle number). | `{"name": "John Doe", "vehicle": "MH-12-AB-1234"}` |
-| **POST** | `/api/slots/{id}/cancel` | Cancel an active reservation and release the slot. | *None* |
-| **POST** | `/api/sensor-event` | Publish raw hardware sensor data (occupied: true/false). | `{"slot": 5, "occupied": true}` |
-| **POST** | `/api/simulate` | Triggers a single randomized sensor event. | *None* |
-
----
 
 ## 🧪 Running Automated Tests
 
