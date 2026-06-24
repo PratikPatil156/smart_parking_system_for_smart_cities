@@ -116,16 +116,4 @@ python -m unittest discover -s tests -v
 **Via VS Code:**
 Go to **Terminal → Run Task → Run Tests**.
 
----
 
-## 🎓 College Demonstration Guide
-
-When presenting this project to evaluators/professors, follow this structured flow:
-
-1. **Explain the IoT Concept**: Explain that in a real-world implementation, each parking slot would have an ultrasonic sensor connected to a microcontroller (like ESP8266/Arduino) publishing state changes to the cloud.
-2. **Launch the Dashboard**: Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)** and show the 12-slot layout. Explain the color codes (Green = Available, Red = Occupied by vehicle, Yellow = Reserved/Pre-booked).
-3. **Demonstrate Pre-Booking**: Click on an available (Green) slot, enter a driver's name and vehicle number, and click **Book**. The slot color immediately changes to Yellow.
-4. **Trigger Sensor Activity**:
-    *   *Manual*: Click the **Simulate sensor** button on the UI to trigger a single event.
-    *   *Automated*: Start `python simulator.py` in the terminal to demonstrate continuous live vehicle entries/exits. Notice how the dashboard and activity logs update automatically.
-5. **Explain the Cloud Integration Option**: Explain that the project is built to easily switch to cloud brokers like **IBM Watson IoT** or **AWS IoT Core**. Point to `node-red/flows.json` and explain how Node-RED acts as a middleware to connect hardware devices to the local dashboard.
